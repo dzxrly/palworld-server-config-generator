@@ -22,6 +22,7 @@ A simple tool for generating Palworld server config.
 
 </div>
 
+---
 
 <div align="center">
 
@@ -34,9 +35,6 @@ Made By Egg Targaryen
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F0PZH7X)
 
 </div>
-
-
----
 
 ## Second Development
 
