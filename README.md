@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![GitHub License](https://img.shields.io/github/license/dzxrly/Palworld-Server-Config-Generator?style=flat-square) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdzxrly%2FPalworld-Server-Config-Generator%2Fmain%2Fpackage.json&query=%24.dependencies.quasar&style=flat-square&color=00b4ff) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdzxrly%2FPalworld-Server-Config-Generator%2Fmain%2Fpackage.json&query=%24.dependencies.vue&style=flat-square&label=Vue&color=327859) ![Static Badge](https://img.shields.io/badge/Code-TypeScript-3178c6?style=flat-square)
+![GitHub License](https://img.shields.io/github/license/dzxrly/Palworld-Server-Config-Generator?style=flat-square) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdzxrly%2FPalworld-Server-Config-Generator%2Fmain%2Fpackage.json&query=%24.dependencies.quasar&style=flat-square&color=00b4ff&label=Quasar) ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdzxrly%2FPalworld-Server-Config-Generator%2Fmain%2Fpackage.json&query=%24.dependencies.vue&style=flat-square&label=Vue&color=327859) ![Static Badge](https://img.shields.io/badge/Code-TypeScript-3178c6?style=flat-square)
 
 </div>
 
