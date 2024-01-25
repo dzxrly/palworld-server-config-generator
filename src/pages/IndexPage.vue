@@ -414,11 +414,26 @@
                  outlined autogrow />
       </div>
       <q-separator />
-      <div class="row justify-between items-center q-mt-md">
-        <q-btn icon="fa-brands fa-github" @click="openUrl('https://github.com/dzxrly/Palworld-Server-Config-Generator')"
-               dense flat>Github
+      <div class="row justify-center items-center q-mt-md">
+        <q-btn
+          class="q-pa-sm"
+          icon="fa-brands fa-github"
+          color="grey-9"
+          @click="openUrl('https://github.com/dzxrly/Palworld-Server-Config-Generator')"
+          dense
+          flat>Github
         </q-btn>
-        <span>Made By Egg Targaryen</span>
+        <q-btn
+          class="q-ml-md q-pa-sm"
+          icon="volunteer_activism"
+          color="negative"
+          @click="openUrl('https://ko-fi.com/F1F0PZH7X')"
+          dense
+          flat>{{ t('btnDonate') }}
+        </q-btn>
+      </div>
+      <div class="row justify-end items-center q-mt-md">
+        <span class="text-body2 text-grey-8">Made By Egg Targaryen</span>
       </div>
     </div>
 
