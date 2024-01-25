@@ -4,7 +4,7 @@
 export default {
   title: 'Palworld Server Config Generator',
 
-  topTips: 'Warning! Multiplayer mode is still in development, some rules may not be effective! Please make a backup before replacing the original rules, this site is not responsible for the result.',
+  topTips: 'Warning! Multiplayer mode is still in development, some rules may not be effective! Please make a backup before replacing the original config file, this site is not responsible for the result. If it\'s not clear what certain rules are used for, then it\'s fine to maintain the defaults!',
 
   settingTitle: 'Server Config Settings',
   settingDifficulty: 'Difficulty',

@@ -189,7 +189,6 @@
         </number-setting-item>
         <number-setting-item
           v-model="settingDropItemMaxNumUNKO"
-          :enable="false"
           setting-name="settingDropItemMaxNumUNKO"
           :fixed-digits="0"
           :step="1"
@@ -260,7 +259,6 @@
         </string-setting-item>
         <string-setting-item
           setting-name="settingRCONPort"
-          :enable="false"
           v-model="settingRCONPort">
         </string-setting-item>
         <string-setting-item
@@ -281,7 +279,6 @@
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbActiveUNKO"
-          :enable="false"
           v-model="settingbActiveUNKO">
         </bool-setting-item>
         <bool-setting-item
@@ -299,7 +296,6 @@
         <bool-setting-item
           setting-name="settingbIsMultiplay"
           v-model="settingbIsMultiplay"
-          :enable="false"
         >
         </bool-setting-item>
         <bool-setting-item
@@ -336,7 +332,6 @@
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingRCONEnabled"
-          :enable="false"
           v-model="settingRCONEnabled">
         </bool-setting-item>
         <bool-setting-item
