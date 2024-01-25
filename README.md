@@ -13,18 +13,23 @@ A simple tool for generating Palworld server config.
 
 ## Supported Language
 
+<div align="center">
+
 | Language Code | Full Supported |                  File Link                  |
 |:-------------:|:--------------:|:-------------------------------------------:|
 |     en-US     |       ✅        | [en-US/index.ts](./src/i18n/en-US/index.ts) |
 |     zh-CN     |       ✅        | [zh-CN/index.ts](./src/i18n/zh-CN/index.ts) |
 
-<div alignt="center">
+</div>
+
+
+<div align="center">
 
 Made By Egg Targaryen
 
 </div>
 
-<div alignt="center">
+<div align="center">
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F0PZH7X)
 
