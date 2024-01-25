@@ -95,5 +95,6 @@ export default {
   downloadEmptyFailed: 'Download failed: config is empty',
 
   editMode: 'Edit Mode',
-  btnDonate: 'Donate'
+  btnDonate: 'Donate',
+  visitors: 'Visitors: '
 };

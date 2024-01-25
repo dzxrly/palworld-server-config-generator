@@ -427,8 +427,10 @@
           flat>{{ t('btnDonate') }}
         </q-btn>
       </div>
-      <div class="row justify-end items-center q-mt-md">
-        <span class="text-body2 text-grey-8">Made By Egg Targaryen</span>
+      <div class="row justify-between items-center q-mt-md">
+        <span class="text-body2 text-grey-8">{{ t('visitors') }}<span
+          id="qiushaocloud_sitecounter_value_site_pv">n</span></span>
+        <span class="text-body2 text-grey-8">By Egg Targaryen</span>
       </div>
     </div>
 
@@ -475,7 +477,7 @@
 
 <script setup lang="ts">
 import NumberSettingItem from 'components/numberSettingItem.vue';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import SelectorSettingItem from 'components/selectorSettingItem.vue';
 import BoolSettingItem from 'components/boolSettingItem.vue';
 import StringSettingItem from 'components/stringSettingItem.vue';
@@ -769,6 +771,13 @@ function downloadConfigFileAsIni() {
 function openUrl(url: string) {
   openURL(url);
 }
+
+onMounted(() => {
+  const script = document.createElement('script');
+  script.src = '//githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js';
+  script.async = true;
+  document.body.appendChild(script);
+});
 </script>
 
 <style lang="sass" scoped>

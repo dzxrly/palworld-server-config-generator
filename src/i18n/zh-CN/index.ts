@@ -92,5 +92,6 @@ export default {
   downloadEmptyFailed: '下载失败: 规则为空',
 
   editMode: '编辑模式',
-  btnDonate: '捐赠'
+  btnDonate: '捐赠',
+  visitors: '访客数: '
 };
