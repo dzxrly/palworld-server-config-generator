@@ -36,9 +36,10 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
 </script>
 
 <template>
-  <div class="row justify-between items-center full-width q-py-sm" :class="[props.backgroundColor]">
+  <div class="selector-setting-item row justify-between items-center full-width q-py-sm"
+       :class="[props.backgroundColor]">
     <div v-if="!isLtMd" class="col-7">
-      <span class="text-subtitle1">{{ t(props.settingName) }}</span>
+      <span class="label-text text-subtitle1">{{ t(props.settingName) }}</span>
     </div>
     <div :class="{'full-width': isLtMd, 'col-5': !isLtMd}">
       <q-select
@@ -72,3 +73,17 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+.label-text
+  font-weight: 400
+  color: #1d1b16
+
+.selector-setting-item:hover, .selector-setting-item:focus
+  content: ""
+
+  .label-text
+    font-weight: 600
+    color: #6d5e00
+</style>
+
