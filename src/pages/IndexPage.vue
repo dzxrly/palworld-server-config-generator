@@ -396,8 +396,8 @@
         </div>
         <div :class="{'row justify-center items-center q-my-md': isLtMd}">
           <label class="cursor-pointer">
-            <span class="text-body1 non-selectable">{{ t('editMode') }}</span>
-            <q-toggle v-model="editMode" color="dark"></q-toggle>
+            <span class="text-body1 non-selectable q-mr-md">{{ t('editMode') }}</span>
+            <q-toggle v-model="editMode" color="dark" dense></q-toggle>
           </label>
         </div>
       </div>

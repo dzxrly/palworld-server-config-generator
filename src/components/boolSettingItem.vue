@@ -29,7 +29,8 @@ const isLtMd = computed(() => $q.screen.lt.md);
 </script>
 
 <template>
-  <div class="bool-setting-item row justify-between items-center full-width q-py-sm" :class="[props.backgroundColor]">
+  <div class="bool-setting-item row justify-between items-center full-width q-py-sm cursor-pointer non-selectable"
+       :class="[props.backgroundColor]" @click="defaultValue=!defaultValue">
     <div class="col-7">
       <span class="label-text text-subtitle1">{{ t(props.settingName) }}</span>
     </div>
