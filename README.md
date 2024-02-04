@@ -8,7 +8,8 @@
 
 A simple tool for generating Palworld server config.
 
-> Warning! Multiplayer mode is still in development, some rules may not be effective! Please make a backup before
+> [!CAUTION]
+> Multiplayer mode is still in development, some rules may not be effective! Please make a backup before
 > replacing the original rules, this site is not responsible for the result.
 
 ## Supported Language
