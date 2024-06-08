@@ -67,7 +67,7 @@ module.exports = configure(function(/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: '/palworld-server-config-generator',
+      // publicPath: '/palworld-server-config-generator',
       // analyze: true,
       // env: {},
       // rawDefine: {}
