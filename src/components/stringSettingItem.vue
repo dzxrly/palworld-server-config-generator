@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 import { computed } from 'vue';
@@ -10,32 +9,35 @@ const $q = useQuasar();
 const props = defineProps({
   settingName: {
     type: String,
-    required: true
+    required: true,
   },
   backgroundColor: {
     type: String,
-    default: 'bg-secondary'
+    default: 'bg-secondary',
   },
   enable: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 
 const defaultValue = defineModel({
   type: String,
   default: '',
-  required: true
+  required: true,
 });
 const isLtMd = computed(() => $q.screen.lt.md);
-const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
+const label = computed(() => ($q.screen.lt.md ? t(props.settingName) : ''));
 </script>
 <template>
-  <div class="string-setting-item row justify-between items-center full-width q-py-sm" :class="[props.backgroundColor]">
+  <div
+    class="string-setting-item row justify-between items-center full-width q-py-sm"
+    :class="[props.backgroundColor]"
+  >
     <div v-if="!isLtMd" class="col-7">
       <span class="label-text text-subtitle1">{{ t(props.settingName) }}</span>
     </div>
-    <div :class="{'full-width': isLtMd, 'col-5': !isLtMd}">
+    <div :class="{ 'full-width': isLtMd, 'col-5': !isLtMd }">
       <q-input
         v-if="!isLtMd"
         v-model="defaultValue"
@@ -45,7 +47,13 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
         outlined
       >
         <template #append v-if="defaultValue != ''">
-          <q-btn icon="clear" @click="defaultValue = ''" :dense="!isLtMd" flat round />
+          <q-btn
+            icon="clear"
+            @click="defaultValue = ''"
+            :dense="!isLtMd"
+            flat
+            round
+          />
         </template>
       </q-input>
       <q-input
@@ -57,7 +65,13 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
         outlined
       >
         <template #append v-if="defaultValue != ''">
-          <q-btn icon="clear" @click="defaultValue = ''" :dense="!isLtMd" flat round />
+          <q-btn
+            icon="clear"
+            @click="defaultValue = ''"
+            :dense="!isLtMd"
+            flat
+            round
+          />
         </template>
       </q-input>
     </div>
@@ -76,4 +90,3 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
     font-weight: 600
     color: #6d5e00
 </style>
-

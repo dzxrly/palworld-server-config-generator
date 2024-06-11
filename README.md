@@ -17,9 +17,9 @@ A simple tool for generating Palworld server config.
 <div align="center">
 
 | Language Code | Full Supported |                  File Link                  |
-|:-------------:|:--------------:|:-------------------------------------------:|
-|     en-US     |       ✅        | [en-US/index.ts](./src/i18n/en-US/index.ts) |
-|     zh-CN     |       ✅        | [zh-CN/index.ts](./src/i18n/zh-CN/index.ts) |
+| :-----------: | :------------: | :-----------------------------------------: |
+|     en-US     |       ✅       | [en-US/index.ts](./src/i18n/en-US/index.ts) |
+|     zh-CN     |       ✅       | [zh-CN/index.ts](./src/i18n/zh-CN/index.ts) |
 
 </div>
 

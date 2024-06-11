@@ -4,7 +4,8 @@
 export default {
   title: 'Palworld Server Config Generator',
 
-  topTips: 'Warning! Multiplayer mode is still in development, some rules may not be effective! Please make a backup before replacing the original config file, this site is not responsible for the result. If it\'s not clear what certain rules are used for, then it\'s fine to maintain the defaults!',
+  topTips:
+    "Warning! Multiplayer mode is still in development, some rules may not be effective! Please make a backup before replacing the original config file, this site is not responsible for the result. If it's not clear what certain rules are used for, then it's fine to maintain the defaults!",
 
   settingTitle: 'Server Config Settings',
   settingDifficulty: 'Difficulty',
@@ -24,12 +25,14 @@ export default {
   settingPalStomachDecreaceRate: 'Pal hunger depletion rate',
   settingPalStaminaDecreaceRate: 'Pal stamina depletion rate',
   settingPalAutoHPRegeneRate: 'Pal auto HP regeneration rate',
-  settingPalAutoHpRegeneRateInSleep: 'Pal sleep health regeneration rate (in Palbox)',
+  settingPalAutoHpRegeneRateInSleep:
+    'Pal sleep health regeneration rate (in Palbox)',
   settingBuildObjectDamageRate: 'Damage to structure multipiler',
   settingBuildObjectDeteriorationDamageRate: 'Structure determination rate',
   settingCollectionDropRate: 'Getherable items multipiler',
   settingCollectionObjectHpRate: 'Getherable objects HP multipiler',
-  settingCollectionObjectRespawnSpeedRate: 'Getherable objects respawn interval',
+  settingCollectionObjectRespawnSpeedRate:
+    'Getherable objects respawn interval',
   settingEnemyDropItemRate: 'Dropped Items Multipiler',
   settingDeathPenalty: 'Death penalty',
   settingGuildPlayerMaxNum: 'Max player of Guild',
@@ -46,15 +49,18 @@ export default {
   settingBaseCampWorkerMaxNum: 'Max number of base camp workers',
   settingDropItemAliveMaxHours: 'Max alive hours of dropped items',
   settingbAutoResetGuildNoOnlinePlayers: 'Reset guild if no online players',
-  settingAutoResetGuildTimeNoOnlinePlayers: 'Time to reset guild if no online players',
+  settingAutoResetGuildTimeNoOnlinePlayers:
+    'Time to reset guild if no online players',
   settingbIsMultiplay: 'Enable Multiplay',
   settingbIsPvP: 'Enable PvP',
-  settingbCanPickupOtherGuildDeathPenaltyDrop: 'Enable picking up other guilds\' death penalty items',
+  settingbCanPickupOtherGuildDeathPenaltyDrop:
+    "Enable picking up other guilds' death penalty items",
   settingbEnableNonLoginPenalty: 'Enable non-login penalty',
   settingbEnableFastTravel: 'Enable fast travel',
   settingbIsStartLocationSelectByMap: 'Enable start location selection',
   settingbExistPlayerAfterLogout: 'Enable player to stay in game after logout',
-  settingbEnableDefenseOtherGuildPlayer: 'Enable defending other guilds\' players',
+  settingbEnableDefenseOtherGuildPlayer:
+    "Enable defending other guilds' players",
   settingCoopPlayerMaxNum: 'Max number of coop players',
   settingServerPlayerMaxNum: 'Maximum number of people who can join the server',
   settingServerName: 'Server Name',
@@ -83,7 +89,8 @@ export default {
   resetCancel: 'Cancel',
 
   btnGenerate: 'Generate',
-  configInitContent: 'No config be generated yet. Please click the button below to generate.',
+  configInitContent:
+    'No config be generated yet. Please click the button below to generate.',
 
   configTitle: 'Server Config',
   btnCopy: 'Copy',
@@ -96,5 +103,5 @@ export default {
 
   editMode: 'Edit Mode',
   btnDonate: 'Donate',
-  visitors: 'Visitors: '
+  visitors: 'Visitors: ',
 };

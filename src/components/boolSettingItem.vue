@@ -9,33 +9,41 @@ const $q = useQuasar();
 const props = defineProps({
   settingName: {
     type: String,
-    required: true
+    required: true,
   },
   backgroundColor: {
     type: String,
-    default: 'bg-secondary'
+    default: 'bg-secondary',
   },
   enable: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 
 const defaultValue = defineModel({
   type: Boolean,
-  required: true
+  required: true,
 });
 const isLtMd = computed(() => $q.screen.lt.md);
 </script>
 
 <template>
-  <div class="bool-setting-item row justify-between items-center full-width q-py-sm cursor-pointer non-selectable"
-       :class="[props.backgroundColor]" @click="defaultValue=!defaultValue">
+  <div
+    class="bool-setting-item row justify-between items-center full-width q-py-sm cursor-pointer non-selectable"
+    :class="[props.backgroundColor]"
+    @click="defaultValue = !defaultValue"
+  >
     <div class="col-7">
       <span class="label-text text-subtitle1">{{ t(props.settingName) }}</span>
     </div>
     <div class="col-5 row justify-end items-center">
-      <q-toggle v-model="defaultValue" color="dark" :disable="!props.enable" :dense="!isLtMd" />
+      <q-toggle
+        v-model="defaultValue"
+        color="dark"
+        :disable="!props.enable"
+        :dense="!isLtMd"
+      />
     </div>
   </div>
 </template>
@@ -52,4 +60,3 @@ const isLtMd = computed(() => $q.screen.lt.md);
     font-weight: 600
     color: #6d5e00
 </style>
-

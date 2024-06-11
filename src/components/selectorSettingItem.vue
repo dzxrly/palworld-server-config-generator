@@ -10,38 +10,40 @@ const $q = useQuasar();
 const props = defineProps({
   settingName: {
     type: String,
-    required: true
+    required: true,
   },
   backgroundColor: {
     type: String,
-    default: 'bg-secondary'
+    default: 'bg-secondary',
   },
   selectorOptions: {
     type: Array as PropType<SelectorOptionsItem<string>[]>,
-    required: true
+    required: true,
   },
   enable: {
     type: Boolean,
-    default: true
-  }
+    default: true,
+  },
 });
 
 const defaultValue = defineModel({
   type: String,
   default: '',
-  required: true
+  required: true,
 });
 const isLtMd = computed(() => $q.screen.lt.md);
-const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
+const label = computed(() => ($q.screen.lt.md ? t(props.settingName) : ''));
 </script>
 
 <template>
-  <div class="selector-setting-item row justify-between items-center full-width q-py-sm"
-       :class="[props.backgroundColor]">
+  <div
+    class="selector-setting-item row justify-between items-center full-width q-py-sm"
+    :class="[props.backgroundColor]"
+  >
     <div v-if="!isLtMd" class="col-7">
       <span class="label-text text-subtitle1">{{ t(props.settingName) }}</span>
     </div>
-    <div :class="{'full-width': isLtMd, 'col-5': !isLtMd}">
+    <div :class="{ 'full-width': isLtMd, 'col-5': !isLtMd }">
       <q-select
         v-if="!isLtMd"
         class="full-width"
@@ -49,7 +51,7 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
         :options="props.selectorOptions"
         color="dark"
         :readonly="!props.enable"
-        :option-label="item => t(item.label)"
+        :option-label="(item) => t(item.label)"
         dense
         outlined
         emit-value
@@ -64,7 +66,7 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
         color="dark"
         :label="label"
         :readonly="!props.enable"
-        :option-label="item => t(item.label)"
+        :option-label="(item) => t(item.label)"
         outlined
         emit-value
         map-options
@@ -86,4 +88,3 @@ const label = computed(() => $q.screen.lt.md ? t(props.settingName) : '');
     font-weight: 600
     color: #6d5e00
 </style>
-

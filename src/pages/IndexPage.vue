@@ -2,7 +2,7 @@
   <q-page class="row justify-evenly items-start q-pb-lg">
     <div
       class="q-py-md full-width"
-      :class="{'q-px-xl': !isLtMd, 'q-px-md': isLtMd}"
+      :class="{ 'q-px-xl': !isLtMd, 'q-px-md': isLtMd }"
     >
       <div class="top-tips q-pa-md">
         <span class="text-body1 text-primary">{{ t('topTips') }}</span>
@@ -15,156 +15,182 @@
       <q-card class="bg-secondary full-width q-pa-md">
         <div
           class="rule-settings-card-title row justify-center items-center q-mb-lg"
-          v-intersection="SettingCardTitleIntersection">
+          v-intersection="SettingCardTitleIntersection"
+        >
           <span class="text-subtitle1 text-bold">{{ t('settingTitle') }}</span>
         </div>
         <selector-setting-item
           :selector-options="difficultyOptions"
           setting-name="settingDifficulty"
-          v-model="settingDifficulty">
+          v-model="settingDifficulty"
+        >
         </selector-setting-item>
         <selector-setting-item
           :selector-options="deathPenaltyOptions"
           setting-name="settingDeathPenalty"
-          v-model="settingDeathPenalty">
+          v-model="settingDeathPenalty"
+        >
         </selector-setting-item>
         <number-setting-item
           v-model="settingDayTimeSpeedRate"
           setting-name="settingDayTimeSpeedRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingNightTimeSpeedRate"
           setting-name="settingNightTimeSpeedRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingExpRate"
           setting-name="settingExpRate"
           :max-value="20"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalCaptureRate"
           setting-name="settingPalCaptureRate"
           :max-value="2"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalSpawnNumRate"
           setting-name="settingPalSpawnNumRate"
           :max-value="3"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalDamageRateAttack"
           setting-name="settingPalDamageRateAttack"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalDamageRateDefense"
           setting-name="settingPalDamageRateDefense"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPlayerDamageRateAttack"
           setting-name="settingPlayerDamageRateAttack"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPlayerDamageRateDefense"
           setting-name="settingPlayerDamageRateDefense"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPlayerStomachDecreaceRate"
           setting-name="settingPlayerStomachDecreaceRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPlayerStaminaDecreaceRate"
           setting-name="settingPlayerStaminaDecreaceRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPlayerAutoHPRegeneRate"
           setting-name="settingPlayerAutoHPRegeneRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPlayerAutoHpRegeneRateInSleep"
           setting-name="settingPlayerAutoHpRegeneRateInSleep"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalStomachDecreaceRate"
           setting-name="settingPalStomachDecreaceRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalStaminaDecreaceRate"
           setting-name="settingPalStaminaDecreaceRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalAutoHPRegeneRate"
           setting-name="settingPalAutoHPRegeneRate"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalAutoHpRegeneRateInSleep"
           setting-name="settingPalAutoHpRegeneRateInSleep"
           :max-value="5"
-          :min-value="0.1">
+          :min-value="0.1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingBuildObjectDamageRate"
           setting-name="settingBuildObjectDamageRate"
           :max-value="3"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingBuildObjectDeteriorationDamageRate"
           setting-name="settingBuildObjectDeteriorationDamageRate"
           :max-value="10"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingCollectionDropRate"
           setting-name="settingCollectionDropRate"
           :max-value="3"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingCollectionObjectHpRate"
           setting-name="settingCollectionObjectHpRate"
           :max-value="3"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingCollectionObjectRespawnSpeedRate"
           setting-name="settingCollectionObjectRespawnSpeedRate"
           :max-value="3"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingEnemyDropItemRate"
           setting-name="settingEnemyDropItemRate"
           :max-value="3"
-          :min-value="0.5">
+          :min-value="0.5"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingGuildPlayerMaxNum"
@@ -172,58 +198,67 @@
           :fixed-digits="0"
           :step="1"
           :max-value="100"
-          :min-value="1">
+          :min-value="1"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingPalEggDefaultHatchingTime"
           setting-name="settingPalEggDefaultHatchingTime"
           :max-value="240"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingDropItemMaxNum"
           setting-name="settingDropItemMaxNum"
           :fixed-digits="0"
           :step="1"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingDropItemMaxNumUNKO"
           setting-name="settingDropItemMaxNumUNKO"
           :fixed-digits="0"
           :step="1"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingBaseCampMaxNum"
           setting-name="settingBaseCampMaxNum"
           :fixed-digits="0"
           :step="1"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingBaseCampWorkerMaxNum"
           setting-name="settingBaseCampWorkerMaxNum"
           :fixed-digits="0"
           :step="1"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingDropItemAliveMaxHours"
           setting-name="settingDropItemAliveMaxHours"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingAutoResetGuildTimeNoOnlinePlayers"
           setting-name="settingAutoResetGuildTimeNoOnlinePlayers"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingCoopPlayerMaxNum"
           setting-name="settingCoopPlayerMaxNum"
           :fixed-digits="0"
           :step="1"
-          :min-value="0">
+          :min-value="0"
+        >
         </number-setting-item>
         <number-setting-item
           v-model="settingServerPlayerMaxNum"
@@ -231,130 +266,158 @@
           :fixed-digits="0"
           :step="1"
           :max-value="32"
-          :min-value="1">
+          :min-value="1"
+        >
         </number-setting-item>
         <string-setting-item
           setting-name="settingServerName"
-          v-model="settingServerName">
+          v-model="settingServerName"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingServerDescription"
-          v-model="settingServerDescription">
+          v-model="settingServerDescription"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingAdminPassword"
-          v-model="settingAdminPassword">
+          v-model="settingAdminPassword"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingServerPassword"
-          v-model="settingServerPassword">
+          v-model="settingServerPassword"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingPublicPort"
-          v-model="settingPublicPort">
+          v-model="settingPublicPort"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingPublicIP"
-          v-model="settingPublicIP">
+          v-model="settingPublicIP"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingRCONPort"
-          v-model="settingRCONPort">
+          v-model="settingRCONPort"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingRegion"
-          v-model="settingRegion">
+          v-model="settingRegion"
+        >
         </string-setting-item>
         <string-setting-item
           setting-name="settingBanListURL"
-          v-model="settingBanListURL">
+          v-model="settingBanListURL"
+        >
         </string-setting-item>
         <bool-setting-item
           setting-name="settingbEnableFriendlyFire"
-          v-model="settingbEnableFriendlyFire">
+          v-model="settingbEnableFriendlyFire"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnableInvaderEnemy"
-          v-model="settingbEnableInvaderEnemy">
+          v-model="settingbEnableInvaderEnemy"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbActiveUNKO"
-          v-model="settingbActiveUNKO">
+          v-model="settingbActiveUNKO"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnableAimAssistPad"
-          v-model="settingbEnableAimAssistPad">
+          v-model="settingbEnableAimAssistPad"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnableAimAssistKeyboard"
-          v-model="settingbEnableAimAssistKeyboard">
+          v-model="settingbEnableAimAssistKeyboard"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbAutoResetGuildNoOnlinePlayers"
-          v-model="settingbAutoResetGuildNoOnlinePlayers">
+          v-model="settingbAutoResetGuildNoOnlinePlayers"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbIsMultiplay"
           v-model="settingbIsMultiplay"
         >
         </bool-setting-item>
-        <bool-setting-item
-          setting-name="settingbIsPvP"
-          v-model="settingbIsPvP">
+        <bool-setting-item setting-name="settingbIsPvP" v-model="settingbIsPvP">
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbCanPickupOtherGuildDeathPenaltyDrop"
-          v-model="settingbCanPickupOtherGuildDeathPenaltyDrop">
+          v-model="settingbCanPickupOtherGuildDeathPenaltyDrop"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnableNonLoginPenalty"
-          v-model="settingbEnableNonLoginPenalty">
+          v-model="settingbEnableNonLoginPenalty"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnableFastTravel"
-          v-model="settingbEnableFastTravel">
+          v-model="settingbEnableFastTravel"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbIsStartLocationSelectByMap"
-          v-model="settingbIsStartLocationSelectByMap">
+          v-model="settingbIsStartLocationSelectByMap"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbExistPlayerAfterLogout"
-          v-model="settingbExistPlayerAfterLogout">
+          v-model="settingbExistPlayerAfterLogout"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnableDefenseOtherGuildPlayer"
-          v-model="settingbEnableDefenseOtherGuildPlayer">
+          v-model="settingbEnableDefenseOtherGuildPlayer"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbEnablePlayerToPlayerDamage"
-          v-model="settingbEnablePlayerToPlayerDamage">
+          v-model="settingbEnablePlayerToPlayerDamage"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingRCONEnabled"
-          v-model="settingRCONEnabled">
+          v-model="settingRCONEnabled"
+        >
         </bool-setting-item>
         <bool-setting-item
           setting-name="settingbUseAuth"
-          v-model="settingbUseAuth">
+          v-model="settingbUseAuth"
+        >
         </bool-setting-item>
         <div
           class="btn-row q-mt-lg"
-          :class="{ 'col justify-center items-center': isLtMd, 'row justify-between items-center': !isLtMd}"
+          :class="{
+            'col justify-center items-center': isLtMd,
+            'row justify-between items-center': !isLtMd,
+          }"
         >
           <q-btn
-            :class="{'full-width': isLtMd, 'col-8': !isLtMd}"
+            :class="{ 'full-width': isLtMd, 'col-8': !isLtMd }"
             icon="sim_card_download"
             color="dark"
             @click="generateConfig()"
-            outline>{{ t('btnGenerate') }}
+            outline
+            >{{ t('btnGenerate') }}
           </q-btn>
           <q-btn
-            :class="{'full-width q-mt-md': isLtMd, 'col-3': !isLtMd}"
+            :class="{ 'full-width q-mt-md': isLtMd, 'col-3': !isLtMd }"
             icon="delete"
             color="negative"
             @click="showDefaultDialog = true"
-            outline>{{ t('btnReset') }}
+            outline
+            >{{ t('btnReset') }}
           </q-btn>
         </div>
       </q-card>
@@ -364,49 +427,64 @@
       :class="{ 'q-px-lg q-mt-lg': isLtMd }"
     >
       <div class="row justify-center items-center full-width">
-        <span class="text-subtitle1 text-bold q-mt-md q-mb-lg">{{ t('configTitle') }}</span>
+        <span class="text-subtitle1 text-bold q-mt-md q-mb-lg">{{
+          t('configTitle')
+        }}</span>
       </div>
       <div v-if="!isLtMd" class="config-display-textarea full-width">
-        <q-input color="dark"
-                 v-model="configFileContent"
-                 :readonly="!editMode"
-                 :placeholder="t('configInitContent')"
-                 outlined autogrow />
+        <q-input
+          color="dark"
+          v-model="configFileContent"
+          :readonly="!editMode"
+          :placeholder="t('configInitContent')"
+          outlined
+          autogrow
+        />
       </div>
       <div
         class="full-width"
-        :class="{'col justify-start items-center': isLtMd, 'row justify-between items-center q-my-md': !isLtMd}"
+        :class="{
+          'col justify-start items-center': isLtMd,
+          'row justify-between items-center q-my-md': !isLtMd,
+        }"
       >
         <div>
           <q-btn
             class="download-btn"
-            :class="{'full-width': isLtMd}"
+            :class="{ 'full-width': isLtMd }"
             color="dark"
             icon="download"
             @click="downloadConfigFileAsIni()"
-            outline>{{ t('btnDownload') }}
+            outline
+            >{{ t('btnDownload') }}
           </q-btn>
           <q-btn
-            :class="{'full-width q-mt-md': isLtMd, 'q-ml-md': !isLtMd}"
+            :class="{ 'full-width q-mt-md': isLtMd, 'q-ml-md': !isLtMd }"
             color="dark"
             icon="content_copy"
             @click="copyConfig()"
-            outline>{{ t('btnCopy') }}
+            outline
+            >{{ t('btnCopy') }}
           </q-btn>
         </div>
-        <div :class="{'row justify-center items-center q-my-md': isLtMd}">
+        <div :class="{ 'row justify-center items-center q-my-md': isLtMd }">
           <label class="cursor-pointer">
-            <span class="text-body1 non-selectable q-mr-md">{{ t('editMode') }}</span>
+            <span class="text-body1 non-selectable q-mr-md">{{
+              t('editMode')
+            }}</span>
             <q-toggle v-model="editMode" color="dark" dense></q-toggle>
           </label>
         </div>
       </div>
       <div v-if="isLtMd" class="config-display-textarea full-width q-mb-md">
-        <q-input color="dark"
-                 v-model="configFileContent"
-                 :readonly="!editMode"
-                 :placeholder="t('configInitContent')"
-                 outlined autogrow />
+        <q-input
+          color="dark"
+          v-model="configFileContent"
+          :readonly="!editMode"
+          :placeholder="t('configInitContent')"
+          outlined
+          autogrow
+        />
       </div>
       <q-separator />
       <div class="row justify-center items-center q-mt-md">
@@ -414,9 +492,14 @@
           class="q-pa-sm"
           icon="fa-brands fa-github"
           color="grey-9"
-          @click="openUrl('https://github.com/dzxrly/Palworld-Server-Config-Generator')"
+          @click="
+            openUrl(
+              'https://github.com/dzxrly/Palworld-Server-Config-Generator'
+            )
+          "
           dense
-          flat>Github
+          flat
+          >Github
         </q-btn>
         <q-btn
           class="q-ml-md q-pa-sm"
@@ -424,12 +507,15 @@
           color="negative"
           @click="openUrl('https://ko-fi.com/F1F0PZH7X')"
           dense
-          flat>{{ t('btnDonate') }}
+          flat
+          >{{ t('btnDonate') }}
         </q-btn>
       </div>
       <div class="row justify-between items-center q-mt-md">
-        <span class="text-body2 text-grey-8">{{ t('visitors') }}<span
-          id="qiushaocloud_sitecounter_value_site_pv">n</span></span>
+        <span class="text-body2 text-grey-8"
+          >{{ t('visitors')
+          }}<span id="qiushaocloud_sitecounter_value_site_pv">n</span></span
+        >
         <span class="text-body2 text-grey-8">By Egg Targaryen</span>
       </div>
     </div>
@@ -462,15 +548,17 @@
     <q-page-sticky
       class="up-btn-wrap"
       position="bottom-right"
-      :offset="[30, 30]">
+      :offset="[30, 30]"
+    >
       <q-btn
         class="shadow-4"
-        :class="{'no-pointer-events': settingCardTitleVisible}"
+        :class="{ 'no-pointer-events': settingCardTitleVisible }"
         color="dark"
         icon="arrow_upward"
         @click="scrollToTarget('.rule-settings-card-title')"
         size="md"
-        round />
+        round
+      />
     </q-page-sticky>
   </q-page>
 </template>
@@ -544,17 +632,19 @@ const settingRCONEnabled = ref<boolean>(false);
 const settingRCONPort = ref<string>('');
 const settingRegion = ref<string>('');
 const settingbUseAuth = ref<boolean>(true);
-const settingBanListURL = ref<string>('https://api.palworldgame.com/api/banlist.txt');
+const settingBanListURL = ref<string>(
+  'https://api.palworldgame.com/api/banlist.txt'
+);
 
 const difficultyOptions = [
   { label: 'difficultyOptionsNone', value: 'None' },
-  { label: 'difficultyOptionsHard', value: 'Hard' }
+  { label: 'difficultyOptionsHard', value: 'Hard' },
 ];
 const deathPenaltyOptions = [
   { label: 'deathPenaltyOptionsNone', value: 'None' },
   { label: 'deathPenaltyOptionsItem', value: 'Item' },
   { label: 'deathPenaltyOptionsItemAndEquipment', value: 'ItemAndEquipment' },
-  { label: 'deathPenaltyOptionsAll', value: 'All' }
+  { label: 'deathPenaltyOptionsAll', value: 'All' },
 ];
 
 const { t } = useI18n();
@@ -564,7 +654,9 @@ const configFileContent = ref<string>('');
 const editMode = ref(false);
 const $q = useQuasar();
 const settingCardTitleVisible = ref(true);
-const settingCardTitlOpacity = computed(() => settingCardTitleVisible.value ? 0 : 1);
+const settingCardTitlOpacity = computed(() =>
+  settingCardTitleVisible.value ? 0 : 1
+);
 const isLtMd = computed(() => $q.screen.lt.md);
 
 function setToDefault() {
@@ -652,7 +744,8 @@ function scrollToTarget(id: string) {
 
 function generateConfig() {
   // generate config file
-  configFileContent.value = '[/Script/Pal.PalGameWorldSettings]\nOptionSettings=(' +
+  configFileContent.value =
+    '[/Script/Pal.PalGameWorldSettings]\nOptionSettings=(' +
     `Difficulty=${settingDifficulty.value},` +
     `DayTimeSpeedRate=${settingDayTimeSpeedRate.value},` +
     `NightTimeSpeedRate=${settingNightTimeSpeedRate.value},` +
@@ -680,28 +773,50 @@ function generateConfig() {
     `DeathPenalty=${settingDeathPenalty.value},` +
     `GuildPlayerMaxNum=${settingGuildPlayerMaxNum.value},` +
     `PalEggDefaultHatchingTime=${settingPalEggDefaultHatchingTime.value},` +
-    `bEnableFriendlyFire=${jsBoolToPythonBool(settingbEnableFriendlyFire.value)},` +
-    `bEnableInvaderEnemy=${jsBoolToPythonBool(settingbEnableInvaderEnemy.value)},` +
+    `bEnableFriendlyFire=${jsBoolToPythonBool(
+      settingbEnableFriendlyFire.value
+    )},` +
+    `bEnableInvaderEnemy=${jsBoolToPythonBool(
+      settingbEnableInvaderEnemy.value
+    )},` +
     `bActiveUNKO=${jsBoolToPythonBool(settingbActiveUNKO.value)},` +
-    `bEnableAimAssistPad=${jsBoolToPythonBool(settingbEnableAimAssistPad.value)},` +
-    `bEnableAimAssistKeyboard=${jsBoolToPythonBool(settingbEnableAimAssistKeyboard.value)},` +
+    `bEnableAimAssistPad=${jsBoolToPythonBool(
+      settingbEnableAimAssistPad.value
+    )},` +
+    `bEnableAimAssistKeyboard=${jsBoolToPythonBool(
+      settingbEnableAimAssistKeyboard.value
+    )},` +
     `DropItemMaxNum=${settingDropItemMaxNum.value},` +
     `DropItemMaxNum_UNKO=${settingDropItemMaxNumUNKO.value},` +
     `BaseCampMaxNum=${settingBaseCampMaxNum.value},` +
     `BaseCampWorkerMaxNum=${settingBaseCampWorkerMaxNum.value},` +
     `DropItemAliveMaxHours=${settingDropItemAliveMaxHours.value},` +
-    `bAutoResetGuildNoOnlinePlayers=${jsBoolToPythonBool(settingbAutoResetGuildNoOnlinePlayers.value)},` +
+    `bAutoResetGuildNoOnlinePlayers=${jsBoolToPythonBool(
+      settingbAutoResetGuildNoOnlinePlayers.value
+    )},` +
     `AutoResetGuildTimeNoOnlinePlayers=${settingAutoResetGuildTimeNoOnlinePlayers.value},` +
     `bIsMultiplay=${jsBoolToPythonBool(settingbIsMultiplay.value)},` +
     `bIsPvP=${jsBoolToPythonBool(settingbIsPvP.value)},` +
-    `bCanPickupOtherGuildDeathPenaltyDrop=${jsBoolToPythonBool(settingbCanPickupOtherGuildDeathPenaltyDrop.value)},` +
-    `bEnableNonLoginPenalty=${jsBoolToPythonBool(settingbEnableNonLoginPenalty.value)},` +
+    `bCanPickupOtherGuildDeathPenaltyDrop=${jsBoolToPythonBool(
+      settingbCanPickupOtherGuildDeathPenaltyDrop.value
+    )},` +
+    `bEnableNonLoginPenalty=${jsBoolToPythonBool(
+      settingbEnableNonLoginPenalty.value
+    )},` +
     `bEnableFastTravel=${jsBoolToPythonBool(settingbEnableFastTravel.value)},` +
-    `bIsStartLocationSelectByMap=${jsBoolToPythonBool(settingbIsStartLocationSelectByMap.value)},` +
-    `bExistPlayerAfterLogout=${jsBoolToPythonBool(settingbExistPlayerAfterLogout.value)},` +
-    `bEnableDefenseOtherGuildPlayer=${jsBoolToPythonBool(settingbEnableDefenseOtherGuildPlayer.value)},` +
+    `bIsStartLocationSelectByMap=${jsBoolToPythonBool(
+      settingbIsStartLocationSelectByMap.value
+    )},` +
+    `bExistPlayerAfterLogout=${jsBoolToPythonBool(
+      settingbExistPlayerAfterLogout.value
+    )},` +
+    `bEnableDefenseOtherGuildPlayer=${jsBoolToPythonBool(
+      settingbEnableDefenseOtherGuildPlayer.value
+    )},` +
     `CoopPlayerMaxNum=${settingCoopPlayerMaxNum.value},` +
-    `bEnablePlayerToPlayerDamage=${jsBoolToPythonBool(settingbEnablePlayerToPlayerDamage.value)},` +
+    `bEnablePlayerToPlayerDamage=${jsBoolToPythonBool(
+      settingbEnablePlayerToPlayerDamage.value
+    )},` +
     `ServerPlayerMaxNum=${settingServerPlayerMaxNum.value},` +
     `ServerName=${asString(settingServerName.value)},` +
     `ServerDescription=${asString(settingServerDescription.value)},` +
@@ -721,30 +836,33 @@ function generateConfig() {
 
 function copyConfig() {
   if (configFileContent.value) {
-    copyToClipboard(configFileContent.value).then(() => {
-      $q.notify({
-        message: t('copySuccess'),
-        color: 'positive',
-        textColor: 'primary',
-        icon: 'done',
-        position: 'top'
+    copyToClipboard(configFileContent.value)
+      .then(() => {
+        $q.notify({
+          message: t('copySuccess'),
+          color: 'positive',
+          textColor: 'primary',
+          icon: 'done',
+          position: 'top',
+        });
+      })
+      .catch((reason) => {
+        $q.notify({
+          message: `${t('copyFailed')}${reason}}`,
+          color: 'negative',
+          textColor: 'accent',
+          icon: 'error',
+          position: 'top',
+        });
       });
-    }).catch((reason) => {
-      $q.notify({
-        message: `${t('copyFailed')}${reason}}`,
-        color: 'negative',
-        textColor: 'accent',
-        icon: 'error',
-        position: 'top'
-      });
+  } else
+    $q.notify({
+      message: t('copyEmptyFailed'),
+      color: 'negative',
+      textColor: 'accent',
+      icon: 'error',
+      position: 'top',
     });
-  } else $q.notify({
-    message: t('copyEmptyFailed'),
-    color: 'negative',
-    textColor: 'accent',
-    icon: 'error',
-    position: 'top'
-  });
 }
 
 function SettingCardTitleIntersection(entry: { isIntersecting: boolean }) {
@@ -759,13 +877,14 @@ function downloadConfigFileAsIni() {
     link.href = url;
     link.download = 'PalGameWorldSettings.ini';
     link.click();
-  } else $q.notify({
-    message: t('downloadEmptyFailed'),
-    color: 'negative',
-    textColor: 'accent',
-    icon: 'error',
-    position: 'top'
-  });
+  } else
+    $q.notify({
+      message: t('downloadEmptyFailed'),
+      color: 'negative',
+      textColor: 'accent',
+      icon: 'error',
+      position: 'top',
+    });
 }
 
 function openUrl(url: string) {
@@ -774,7 +893,8 @@ function openUrl(url: string) {
 
 onMounted(() => {
   const script = document.createElement('script');
-  script.src = '//githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js';
+  script.src =
+    '//githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js';
   script.async = true;
   document.body.appendChild(script);
 });
